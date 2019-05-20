@@ -1,0 +1,13 @@
+FROM centos
+MAINTAINER harry<yuzh233@gmail.com>
+
+ENV MY_PATH /usr/local
+WORKDIR $MY_PATH
+
+RUN yum -y install vim
+RUN yum -y install net-tools
+
+EXPOSE 8088
+
+CMD echo 'my workdir is' $MY_PATH
+CMD /bin/bash 
