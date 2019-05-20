@@ -1,3 +1,13 @@
+---
+title: Docker 补救指南（三）—— Docker Swarm
+date: 2019-05-18
+tags:
+- docker
+categories:
+- docker
+thumbnail: http://img.yuzh.xyz/docker-note/wallhaven-263173.jpg
+toc: true
+---
 
 # 是什么
 Docker Swarm 是一个创建和管理 Docker 集群的工具，该工具主要用于 Docker 的集群管理和容器编排。其特点有下：
