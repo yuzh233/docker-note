@@ -5,7 +5,7 @@ tags:
 - docker
 categories:
 - docker
-thumbnail: http://img.yuzh.xyz/docker-note/wallhaven-263173.jpg
+thumbnail: http://img.yuzh.xyz/docker-note/65.jpg
 toc: true
 ---
 
