@@ -23,6 +23,7 @@ Docker Swarm 是一个创建和管理 Docker 集群的工具，该工具主要�
 
 > Docker Swarm 是 Docker 官方在 Docker1.12 后自带支持的新型容器集群管理工具。在此之前比较成熟的容器集群管理工具有 Google 的 Kubernetes 和 Apache 的分布式管理框架 Mesos 等。
 
+<!-- more -->
 
 **[核心概念：节点、服务、任务的描述](https://yeasy.gitbooks.io/docker_practice/content/swarm_mode/overview.html)**
 

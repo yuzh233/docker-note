@@ -13,6 +13,7 @@ toc: true
 
 Docker 默认使用 **bridge**（单主机互联）和 **overlay**（可跨主机互联）两种**网络驱动**来进行容器的网络管理。如果需要，用户可以自定义网络驱动插件进行 Docker 的网络管理。以下内容针对 Docker 默认的网络管理和自定义网络管理进行演示学习。
 
+<!-- more -->
 ## 查看指令
 
 不管其他细节，先看有哪些常用命令：
@@ -33,7 +34,6 @@ Run 'docker network COMMAND --help' for more information on a command.
 
 可以看到对于网络的操作大概都有这些操作：`连接、创建、取消连接、查看细节、查看列表、移除。`
 
-<!-- more -->
 ## Docker 默认网络管理
 
 Docker 安装时会自动创建三种网络。查看所有网络指令：**docker netwok ls**
