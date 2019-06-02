@@ -4,7 +4,7 @@ date: 2019-05-11
 tags:
 - docker
 categories:
-- docker
+- 技术
 thumbnail: http://img.yuzh.xyz/docker-note/wallhaven-263173.jpg
 toc: true
 ---
@@ -1675,4 +1675,12 @@ docker push registry.cn-hangzhou.aliyuncs.com/yuzh/test-dockerfile:[镜像版本
 
 ```sh
 docker pull registry.cn-hangzhou.aliyuncs.com/yuzh/test-dockerfile:[镜像版本号]
+```
+
+**5）登出远程仓库**
+
+docker logout [仓库地址]
+
+```sh
+e.g: docker logout registry.cn-shanghai.aliyuncs.com
 ```
