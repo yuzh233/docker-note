@@ -75,6 +75,7 @@ See authentication docs.
 
 reference：https://github.com/spotify/dockerfile-maven/blob/master/docs/authentication.md
 
+[我的翻译]()
 
 **依靠 Dockerfile 插件的其他 Docker 工具**
 
