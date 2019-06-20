@@ -1508,8 +1508,6 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
 5. ...... 「输入密码」 ......
 6. 数据库操作（show databases; use mysql; show tables; select * from user; ......）
 
-
-
 **修改默认配置文件：**
 
 Mysql 默认的配置文件在：`/etc/mysql/my.cnf`，我们可以在容器启动时以数据卷的方式挂载自己的配置文件到容器上：
@@ -1545,6 +1543,44 @@ docker run -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw
 ```sh
 docker exec some-mysql sh -c 'exec mysqldump --all-databases -uroot -p"$MYSQL_ROOT_PASSWORD"' &gt; /some/path/on/your/host/all-databases.sql
 ```
+
+**Docker Compose 启动 Mysql**
+
+最简单的例子：
+
+```sh
+# Use root/example as user/password credentials
+version: '3.1'
+services:
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+    ports:
+      - 3336:3306
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+```
+
+**如何在主机客户端连接容器中的 Mysql 服务端**
+
+Compose 中的应用属于自己的网络，外界不能访问。首先需要暴露端口，注意：尽量不要使用  3306，因为主机大多数安装了Mysql，此端口会被占用。
+
+其次，连接命令类似于如下：
+
+```sh
+mysql -h localhost -P 3336 --protocol=tcp -u root
+```
+
+需要额外指定参数：`--protocol=tcp`，因为我们的 Mysql 在 Docker 里面，socket 将不可用，所以需要通过 TCP 连接它，在 MySQL 命令中设置“-protocol”将改变这一点。
+
+_引用：https://stackoverflow.com/questions/33001750/connect-to-mysql-in-a-docker-container-from-the-host_
 
 ## 安装 Redis
 
