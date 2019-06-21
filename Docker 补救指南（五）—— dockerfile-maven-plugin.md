@@ -124,7 +124,7 @@ reference：https://github.com/spotify/dockerfile-maven/blob/master/docs/authent
 **0）如果不想指定 push 到远程仓库的用户名和密码的话，可以先登陆远程仓库。（否则，需要在 pom 中或 setting.xml 中配置远程仓库用户名和密码）**
 
 ```
-e.g: locker login --username=yuzh233 registry.cn-shanghai.aliyuncs.com
+e.g: docker login --username=yuzh233 registry.cn-shanghai.aliyuncs.com
 ```
 
 **1） 使用最新的 `1.4.10` 版本 push 会有点问题，可能缺少什么配置，从官方 github 没有找出问题出来。目前使用 `1.4.3` 没问题。**

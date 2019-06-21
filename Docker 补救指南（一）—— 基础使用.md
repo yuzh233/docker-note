@@ -1575,7 +1575,8 @@ Compose 中的应用属于自己的网络，外界不能访问。首先需要�
 其次，连接命令类似于如下：
 
 ```sh
-mysql -h localhost -P 3336 --protocol=tcp -u root
+# note: -P 是指定端口，-p 是指定密码
+mysql -h localhost -P 3336 --protocol=tcp -u root -p
 ```
 
 需要额外指定参数：`--protocol=tcp`，因为我们的 Mysql 在 Docker 里面，socket 将不可用，所以需要通过 TCP 连接它，在 MySQL 命令中设置“-protocol”将改变这一点。
