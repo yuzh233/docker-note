@@ -4,7 +4,7 @@ date: 2019-05-11
 tags:
 - docker
 categories:
-- 技术
+- docker-note
 thumbnail: http://img.yuzh.xyz/docker-note/wallhaven-263173.jpg
 toc: true
 ---

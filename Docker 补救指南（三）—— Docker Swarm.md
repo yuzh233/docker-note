@@ -4,7 +4,7 @@ date: 2019-05-18
 tags:
 - docker
 categories:
-- 技术
+- docker-note
 thumbnail: http://img.yuzh.xyz/51.jpg
 toc: true
 ---

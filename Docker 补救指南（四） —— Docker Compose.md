@@ -1,10 +1,10 @@
 ---
-title: Docker 补救指南（二）—— Docker Compose
-date: 2019-05-23
+title: Docker 补救指南（四）—— Docker Compose
+date: 2019-05-31
 tags:
 - docker
 categories:
-- 技术
+- docker-note
 thumbnail: http://img.yuzh.xyz/blog48.jpg
 toc: true
 ---

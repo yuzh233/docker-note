@@ -5,7 +5,7 @@ tags:
 - docker
 - maven
 categories:
-- 问题解决
+- docker-note
 thumbnail: http://img.yuzh.xyz/docker-note/65.jpg
 toc: true
 ---
