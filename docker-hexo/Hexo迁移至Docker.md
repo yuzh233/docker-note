@@ -21,7 +21,7 @@ total 8
 drwxr-xr-x@ 15 harry  staff   480B Jun 17 17:19 harrys-blog # 根目录
 ~/Workspace/docker-hexo  $
 ```
-
+<!-- more -->
 **二）编写 Dockerfile 脚本，构建镜像。**
 
 **docker build -f Dockerfile -t harrys-blog:latest .**

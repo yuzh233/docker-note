@@ -1,19 +1,19 @@
 ---
-title: Docker 补救指南（五）—— dockerfile-maven-plugin
+title: Docker 补救指南（四）—— dockerfile-maven-plugin
 date: 2019-05-30
 tags:
 - docker
 - maven
 categories:
 - docker-note
-thumbnail: http://img.yuzh.xyz/docker-note/65.jpg
+thumbnail: http://img.yuzh.xyz/blog/kaitlyn-baker-422999-unsplash.jpg
 toc: true
 ---
 
 # dockerfile-maven-plugin 插件介绍
 
 该插件帮助 Maven 集成 Docker
-
+<!-- more -->
 - 不需要任何花里胡哨的操作🤪。这个插件使用 Dockerfile 构建镜像，并且是强制性的。
 - 使 Docker 的构建过程集成 Maven 的构建过程，如果绑定了默认「阶段（phases）」，当输入 `mvn package` 时，将会构建一个镜像；当输入 `mvn deploy` 时，该镜像将会被推送到远程仓库。
 - 让目标「goals」记住你要做什么（通过 goals 标签定制处理过程）。可以通过输入 `mvn dockerfile:tag`、`mvn dockerfile:build`、`mvn dockerfile:push` 来构建并推送一个镜像，作为替代的可以使用：`mvn dockerfile:build dockerfile:push`。
